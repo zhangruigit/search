@@ -6,7 +6,7 @@ fieldset,img {
     border: 0
 }
 img {
-    display: block
+    /* display: block */
 }
 a{
     text-decoration: none;
