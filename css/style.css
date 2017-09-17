@@ -113,13 +113,28 @@
     border: 1px solid red;
 }
 .tms{
-    width: 800px;
+    width: 960px;
     margin: 30px auto;
     height: 200px;
     border: 1px solid blue; 
 }
-.tms div{
-    display: inline-block;
+
+.part1{
+    width: 46%;
+    height:200px;
+    float: left;
+    padding-top: 22.5px
+}
+.part2{
+    width: 54%;
+    height:200px;
+    float: right;
+}
+.part2 p{
+    color: #222324;
+    font-size: 12px;
+    line-height: 19px;
+    margin-top: 10px;
 }
 .tms_banner{
     width: 325px;
