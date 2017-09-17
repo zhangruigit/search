@@ -129,12 +129,14 @@
     width: 54%;
     height:200px;
     float: right;
+    text-align: center;
 }
 .part2 p{
     color: #222324;
     font-size: 12px;
     line-height: 19px;
     margin-top: 10px;
+    text-align: left;
 }
 .tms_banner{
     width: 325px;
