@@ -12,7 +12,6 @@
     width: 1190px;
     margin: 0 auto;
     height: 30px;
-    border: 1px solid red;
 }
 
 .header .container .header_left {
@@ -110,28 +109,26 @@
     width: 1190px;
     margin: 0 auto;
     height: 300px;
-    border: 1px solid red;
 }
 .tms{
     width: 960px;
     margin: 30px auto;
-    height: 200px;
-    border: 1px solid blue; 
+    height: 300px;
 }
 
-.part1{
+.tms .part1{
     width: 46%;
-    height:200px;
+    height:400px;
     float: left;
-    padding-top: 22.5px
+    padding-top: 75px
 }
-.part2{
+.tms .part2{
     width: 54%;
     height:200px;
     float: right;
     text-align: center;
 }
-.part2 p{
+.tms p{
     color: #222324;
     font-size: 12px;
     line-height: 19px;
@@ -144,4 +141,70 @@
 }
 .TMS_systems{
     width: 215px;
+}
+.wmsWrap{
+    width: 100%;
+    margin: 0 auto;
+    background-color:#ccc;
+}
+.wms{
+    width: 960px;
+    margin: 30px auto;
+    height: 300px;
+}
+.wms .part1{
+    float: left;
+    padding-top: 20px
+}
+.wms .part2{
+    float: right;
+    text-align: center;
+}
+.wms p{
+    color: #222324;
+    font-size: 12px;
+    line-height: 19px;
+    margin-top: 10px;
+    text-align: left;
+}
+/*運單基本信息*/
+.Info{
+    width: 960px;
+    margin: 0 auto;
+}
+.Info .info_left{
+    width: 50%;
+    float: left;
+}
+.Info .info_right{
+    width: 42%;
+    float: right;
+}
+.item{
+    display: inline-block;
+    font-size: 14px;
+    color: #000;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    font-family: 微软雅黑
+}
+.item input{
+    height: 22px;
+    background: #fff;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 100px;
+}
+.item_title{
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+    font-family: 微软雅黑;
+    margin-top: 30px
+}
+/*入住企业*/
+.join_img{
+    width: 100%;
+    display: block;
 }

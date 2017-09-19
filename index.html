@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="keywords" content="">
-	<meta name="description" content="">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>物流运单专线查询</title>
-	<link rel="stylesheet" type="text/css" href="css/reset.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>物流运单专线查询</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
 		<div class="header">
 			<div class="container">
 				<div class="header_left">
@@ -37,18 +39,138 @@
 					<img src="img/icon_logo.png" class="icon_logo_img">
 				</div>
 				<div class="inputWrap">
-					<input type="text" placeholder="请输入物流，运单">
+					<input type="text" id="global_number" placeholder="请输入物流，运单" value="S005002132">
 				</div>
-				<div class='searchText'>搜索</div>
+				<div class='searchText' onclick="onQueryShippingOrder()">搜索</div>
 			</div>
 		</div>
-	<div class="tmsWrap">
-		<div class="tms">
-			<div class="part1">
-				<img src="img/tms_banner.png" class="tms_banner">
+		<div class="Info">
+			<div class="info_left">
+				<div class="item_title">运单基本信息</div>
+				<div class="row">
+					<div class="item">
+						单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号:
+						<input type="text" disabled="disabled" name="global_number">
+					</div>
+					<div class="item">
+						提货日期:<input type="text" disabled="disabled" style="width: 124px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						当前状态:<input type="text" disabled="disabled">
+					</div>
+					<div class="item">
+						预计送达日期:<input type="text" disabled="disabled">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						收货地址:<input type="text" disabled="disabled" style='width: 300px'>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						发货日期:<input type="text" disabled="disabled">
+					</div>
+					<div class="item">
+						到货日期:<input type="text" disabled="disabled" style='width: 130px'>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						签收日期:<input type="text" disabled="disabled">
+					</div>
+				</div>
+				<div class="item_title">收货人</div>
+				<div class="row">
+					<div class="item">
+						收货单位:<input type="text" disabled="disabled" style='width: 300px'>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						联系人:<input type="text" disabled="disabled">
+					</div>
+					<div class="item">
+						电话:<input type="text" disabled="disabled" style="width: 174px">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						收货地址:<input type="text" disabled="disabled" style='width: 300px'>
+					</div>
+				</div>
 			</div>
-			<div class="part2">
-				<img src="img/TMS_systems.png" class="TMS_systems">
+			<div class="info_right">
+				<div class="item_title">发货人</div>
+				<div class="row">
+					<div class="item">
+						发货单位:<input type="text" disabled="disabled" style="width: 270px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						联系人:<input type="text" disabled="disabled"name="consignor_contact">
+					</div>
+					<div class="item">
+						电话:<input type="text" disabled="disabled" style="width: 146px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						提货地址:<input type="text" disabled="disabled" style="width: 270px;">
+					</div>
+				</div>
+
+				<div class="item_title" style="margin-top: 98px;">运单详情</div>
+				<div class="row">
+					<div class="item">
+						发&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;站:
+						<input type="text" disabled="disabled">
+					</div>
+					<div class="item">
+						到&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;站:
+						<input type="text" disabled="disabled" style='width: 84px'>
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						货物名称:<input type="text" disabled="disabled" style="width: 268px;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="item">
+						到货日期:<input type="text" disabled="disabled">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div style="clear: both;"></div>
+		<div class="tmsWrap">
+			<div class="tms">
+				<div class="part1">
+					<img src="img/tms_banner.png" class="tms_banner">
+				</div>
+				<div class="part2">
+					<img src="img/TMS_systems.png" class="TMS_systems">
+					<p>
+						服务：不仅仅让您拥有一款软件，要让您能用起来、能用好，我们终生提供服务，不愁学的慢，文员更换。<br> 货源：平台拥有大量工厂、电商、三方，同时拥有物流门户网站推广，让您货源更多。
+						<br> 车源：拥有同城货运平台以及大车车源信息平台，让您更快找到拼成和回程车。
+						<br> 发展：我们有专业团队，为您提供运营、管理和发展方案，并协助您一步一实施。
+						<br> 配货：通过平台，可以和司机、合作伙伴合作，做到重泡货搭配、线路优化。
+						<br> 管理：通过标准化、流程化、信息化平台，提高工作效率，降低出错率，节约成本，提高企业形象和服务质量。
+						<br> 财务：现金日记账记录您每天的收入和支出，财务对账和核销，帮您方便和客户对账和结算，财务报表让您对公司经营状况一目了然，心有成竹。
+						<br> 增值服务：在线保险、单据印刷、金融贷款等服务，让您省心，有更多的精力去开展主营业务。
+					</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="wmsWrap">
+			<div class="wms">
+			<div class="part1">
+			<img src="img/wms_icon.png" class="TMS_systems">
 				<p>
 					服务：不仅仅让您拥有一款软件，要让您能用起来、能用好，我们终生提供服务，不愁学的慢，文员更换。<br>
 货源：平台拥有大量工厂、电商、三方，同时拥有物流门户网站推广，让您货源更多。<br>
@@ -60,8 +182,16 @@
 增值服务：在线保险、单据印刷、金融贷款等服务，让您省心，有更多的精力去开展主营业务。
 				</p>
 			</div>
+			<div class="part2">
+				<img src="img/wms.png" class="tms_banner">
+			</div>
 
 		</div>
-	</div>
-</body>
+	</div> -->
+		<div>
+			<img src="img/join.png" class="join_img">
+		</div>
+		<script type="text/javascript" src='js/init.js'></script>
+	</body>
+
 </html>
